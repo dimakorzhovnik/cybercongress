@@ -40,7 +40,7 @@
 *
 --------------------------------------------------------------------*/
 
-#implementations {
+#propducts {
   @color-white: #fff;
   @color-grey: rgba( 255, 255, 255, 0.6);
   @color-teal: #6acad1;
@@ -51,8 +51,8 @@
   margin-left: -50vw;
   margin-top: 80px;
   padding-bottom: 40px;
-  background: fade(@blue-space, 100%);
-  background-image: url('../images/stars.png'), linear-gradient(to bottom, fade(@blue-space, 100%) 0%,#062b3f 100%);
+  background: fade(@black, 100%);
+  // background-image: url('../images/stars.png'), linear-gradient(to bottom, fade(@blue-space, 100%) 0%,#062b3f 100%);
   background-repeat: repeat;
 
   h2, h3, h5 {
@@ -60,12 +60,15 @@
   }
 
   p {
-    color: @color-grey;
+    color: @white;
+    text-align: center;
+    margin-bottom: 60px
   }
 
   & a:hover {
     h5 {
-      color: @color-teal;
+      color: @color-gravity;
+      opacity: 0.8;
     }
   }
 
@@ -80,7 +83,6 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    border: 1px solid @color-grey;
 
     & img {
       max-width: 90%;
@@ -98,7 +100,6 @@
     & img {
       width: 250px;
       height: 160px;
-      border: 1px solid @color-grey;
     }
   }
 }
@@ -123,6 +124,7 @@
   li {
     float: left;
     width: 45%;
+    margin-bottom: 1%;
 
     &:nth-child(odd) {
       margin-right: 5%;
