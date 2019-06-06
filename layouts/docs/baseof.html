@@ -8,11 +8,12 @@
   {{ partial "head.html" . }}
 </head>
 
-<body>
+<body id='docs'>
+    {{ partial "header.html"  }}
 
     <!-- {{ partial "header.html" }} -->
   <input type="checkbox" style="display: none" id="menu-control" />
-  <main class="flex container">
+  <main class="flex container docs">
     
     <aside class="book-menu fixed">
       {{ partial "docs/menu" . }}

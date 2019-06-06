@@ -107,56 +107,9 @@
 
         {{ partial "implementations.html" . }}
 
-        <section id="team" class="content-center">
-            <h2>IPFS is useful here and now</h2>
-            <div class="grid-flex-container">
-                <div class="grid-flex-cell">
-                    <div class="illustration">
-                        <img src="/images/ipfs-illustration-archivists.svg" />
-                    </div>
-                    <h5>Archivists</h5>
-                    <p>It's not enough to organize the world's information—we need to store it in a way the world can remember it. IPFS provides deduplication, high performance, and clustered persistence.</p>
-                </div>
-                <div class="grid-flex-cell service-providers">
-                    <div class="illustration">
-                        <img src="/images/ipfs-illustration-service.svg" />
-                    </div>
-                    <h5>Service providers</h5>
-                    <p>If your company delivers large amounts of data to users, a peer-to-peer approach could save you millions in bandwidth. IPFS can provide secure P2P content delivery.</p>
-                </div>
-                <div class="grid-flex-cell">
-                    <div class="illustration">
-                        <img src="/images/ipfs-illustration-data.svg" />
-                    </div>
-                    <h5>Researchers</h5>
-                    <p>If you're working with, distributing, and analyzing huge datasets, IPFS offers fast performance and decentralized archiving.</p>
-                </div>
-            </div>
-            <div class="grid-flex-container">
-                <div class="grid-flex-cell">
-                    <div class="illustration">
-                        <img src="/images/ipfs-illustration-developing.svg" />
-                    </div>
-                    <h5>Developing world</h5>
-                    <p>High latency networks are a real barrier of entry to developing world. IPFS provides resilient access to data, independent of low latency or connectivity to the backbone.</p>
-                </div>
-                <div class="grid-flex-cell">
-                    <div class="illustration">
-                        <img src="/images/ipfs-illustration-blockchains.svg" />
-                    </div>
-                    <h5>Blockchains</h5>
-                    <p>IPFS and the Blockchain are a perfect match! You can address large amounts of data with IPFS, and place the immutable, permanent IPFS links into a blockchain transaction. This timestamps and secures your content, without having to put
-                        the data itself on the chain.</p>
-                </div>
-                <div class="grid-flex-cell">
-                    <div class="illustration">
-                        <img src="/images/ipfs-illustration-creators.svg" />
-                    </div>
-                    <h5>Content creators</h5>
-                    <p>IPFS brings the freedom and independent spirit of the web at full force—and at low cost. IPFS can help deliver content in a way which can save you considerable money.</p>
-                </div>
-            </div>
-        </section>
+        {{ partial "team.html" . }}
+
+        
 
         <div class="content-wrapper">
             {{ partial "latest.html" . }}
