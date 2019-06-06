@@ -29,20 +29,6 @@
           </div>
         </div>
       </div>
-    {{ else if eq .hero "starlog" }}
-      <div class="hero hero-major">
-          <h2 class="headline-main">cyber•Congress</h2>
-          <img src="/images/constellation-01.svg" class="constellation"/>
-      </div>
-    {{ else }}
-      <div class="hero{{ if isset .page.Params "pagetype" }} hero-{{ .page.Params.pagetype }}{{ end }}">
-        {{ if isset .page.Params "constellation" }}
-          {{ if isset .page.Params "title" }}
-            <h2 class="headline-main">{{ .page.Params.title }}</h2>
-          {{ end }}
-          <img src="/images/{{ .page.Params.constellation }}" class="constellation"/>
-        {{ end }}
-      </div>
     {{ end }}
   </div>
   <div class="view-more">
