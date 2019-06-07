@@ -1,3 +1,6 @@
+---
+project: chaingear
+---
 # Contracts Overview
 
 ## Design rationale

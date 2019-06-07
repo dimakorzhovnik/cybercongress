@@ -1,3 +1,6 @@
+---
+project: chaingear
+---
 ### Contributing list
 
 1. @litvintech - contracts developer/maintainer

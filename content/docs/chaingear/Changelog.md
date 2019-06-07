@@ -1,3 +1,6 @@
+---
+project: chaingear
+---
 # Change Log
 
 ## [Unreleased](https://github.com/cybercongress/chaingear/tree/HEAD)
