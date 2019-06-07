@@ -1,3 +1,6 @@
+---
+project: js-amino
+---
 # Change Log
 
 ## [Unreleased](https://github.com/cybercongress/js-amino/tree/HEAD)
