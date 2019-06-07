@@ -1,6 +1,6 @@
 ---
 project: js-amino
-title: Contributing to js-amino
+title: Js-amino
 ---
 <h1 align="center">
   <img src="/docs/js-amino/img/logo.png"
