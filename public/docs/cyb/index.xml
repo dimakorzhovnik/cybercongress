@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cyber•Congress</title>
+    <link>/docs/cyb/</link>
+    <description>Recent content on cyber•Congress</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="/docs/cyb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/docs/cyb/app-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cyb/app-guidelines/</guid>
+      <description>DApp guidelines @asadovka
+What is App? App in Cyb is a one or multi page application. It can be a simple html file as a frontend and may include smart contract logic as a backend. Apps should be available through IPFS hash.
+App structure Cyb CLI can automatically generate structure for your App. All you need to do is just type some commands, come up with a name and develop!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/cyb/cyb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cyb/cyb/</guid>
+      <description>Cyb: web3 browser @xhipster @asadovka
+Concept. Definitions are work in progress.
+Current implementation is not in comply with spec yet
+Abstract Cyb is a friendly software robot who helps you explore the universes. Put it simply it just a web3 browser. At the very beginning Cyb is focusing on developers and advanced blockchain users who are able to work with private keys and transactions. But we see how Cyb becomes friendly for everyone who wants to interact with consensus computers in a web of the third generation.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/docs/cyb/web3-vision/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/cyb/web3-vision/</guid>
+      <description>DURA: a missing piece for web3 @xhipster cyberCongress
+Early draft for web3 summit. Looking for a feedback.
+Abstract Originally an idea of web3 was inspired by Gavin Wood in 2014. A vision of Gavin was around 4 implementable concepts: content addressing, cryptographic identities, consensus computing and browsers. In parallel an idea of Interplanetary File System has been developed by Juan Benet. IPFS creates a foundation for web3: a system of content addressing and cryptographic identities.</description>
+    </item>
+    
+  </channel>
+</rss>

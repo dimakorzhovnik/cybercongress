@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en" >
+
+<head>
+  
+  
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>cyber•Congress</title>
+<meta name="description" content="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open." />
+<meta name="author" content="cyber•Congress" />
+
+  <link rel="canonical" href="../../../docs/cyberd/bandwidth/" />
+  <link rel="alternate" href="../../../docs/cyberd/bandwidth/" hreflang="x-default">
+
+
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open." />
+<meta property="og:title" content="cyber•Congress" />
+<meta property="og:site_name" content="cyber•Congress" />
+<meta property="og:url" content="/docs/cyberd/bandwidth/" />
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="//img/ipfs-logo-256-ice.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" contentlogo="146" />
+<meta property="og:image:height" content="166" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="cyber•Congress" />
+<meta name="twitter:title" content="cyber•Congress" />
+<meta name="twitter:creator" content="cyber•Congress" />
+<meta name="twitter:description" content="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open." />
+<meta name="twitter:domain" content="" />
+<meta name="twitter:image:src" content="//img/ipfs-logo-256-ice.png" />
+
+<link rel="stylesheet" href="../../../css/main.css" />
+<link rel="stylesheet" href="../../../highlight/github-gist.css" />
+<link rel="stylesheet" href="../../../asciinema/asciinema-player.css" />
+
+<link rel="shortcut icon" href="../../../img/favicon.png">
+<link rel="alternate feed" href="../../../index.xml" type="application/rss+xml"  title="IPFS Blog" />
+
+<script src="../../../asciinema/asciinema-player.js"></script>
+<script src="../../../highlight/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-52930282-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+
+<body id='docs'>
+    <header class="header-has-logo" id="stars">
+  <div class="container cf">
+    <h1 class="pull-left logo margin-bottom">
+      <a href="../../../" class="logo ipfs-logo transition transition-fadeout">cyber•Congress</a>
+      <a href="../../../"><span class='logo-text'>cyber•Congress</span></a>
+    </h1>
+    <nav role="navigation" class="pull-right top-nav top-nav-dark cf">
+      <input id="menu-toggle" type="checkbox" class="menu-toggle">
+      <label for="menu-toggle"></label>
+      <ul class="list-unstyled list-inline cf">
+        <li><a href="../../../#why">About</a></li>
+        <li><a href="../../../#propducts">Products</a></li>
+        <li><a href="../../../#team" >Team</a></li>
+        <li><a href="../../../#latest" >Latest</a></li>
+        <li><a href="../../../docs/cyb" >Docs</a></li>
+        <li><a href="../../../post" >Blog</a></li>
+        <li><a href="#">Forum</a></li>
+      </ul>
+    </nav>
+    
+  </div>
+  <div class="view-more">
+    <label>View more</label><a href="#"></a>
+  </div>
+</header>
+
+    <header class="docs-header-mob align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="../../../svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    Bandwidth
+  
+</strong>
+</header>
+
+    
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container docs">
+    
+    <aside class="book-menu fixed">
+      <nav>
+    <h2 class="book-brand logo">
+  <a href="../../../" class="ipfs-logo transition transition-fadeout">cyber•Congress</a>
+  <a href="../../../">cyber•Congress</a>
+</h2>
+
+
+
+
+  
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2f cyberd\2f bandwidth\2f "] {
+      color: #36d6ae;
+  }
+  </style>
+
+<ul>
+<li><a href="../../../docs/cyberd/cyberd/">Whitepaper</a></li>
+<li><a href="../../../docs/cyberd/help/run_validator/">Run validator</a></li>
+<li><a href="../../../docs/cyberd/help/ultimate-commands-guide_v2/">Cyberdcli help</a></li>
+<li><a href="../../../docs/cyberd/help/port_forwarding_guide/">Port forwarding help</a></li>
+<li><a href="../../../docs/cyberd/overview/">Overview</a></li>
+<li><a href="../../../docs/cyberd/get_cyb/">Get CYB</a></li>
+<li><a href="../../../docs/cyberd/rpc/">RPC</a></li>
+<li><a href="../../../docs/cyberd/bandwidth/">Bandwidth Specification</a></li>
+<li><a href="../../../docs/cyberd/contributing/">Contributing</a></li>
+<li><a href="../../../docs/cyberd/help/setup_dev_env/">Setup Dev Environment</a></li>
+<li><a href="../../../docs/cyberd/changelog/">Changelog</a></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+        <div class='project'>
+            <a href="../../../docs/cyb">cyb</a>
+            <a href="../../../docs/cyberd">cyberd</a>
+            <a href="../../../docs/chaingear">chaingear</a>
+            <a href="../../../docs/js-amino">js-amino</a>
+          </div>
+      
+<article class="markdown">
+
+<h1 id="minimal-bandwidth-spec">Minimal Bandwidth Spec</h1>
+
+<p><strong>bounded stake</strong>. Stake, that <strong>deducted</strong> from your acc coins and put as <strong>deposit</strong> to take part in consensus.
+Due to passive inflation model and slashing, deposit not match 1-to-1 to final reward.
+So, for example, stakeholders may wish to set up a script,
+ that will periodically withdraw and rebound rewards to increase their share(<strong>bounded stake</strong>).</p>
+
+<p><strong>active stake</strong>. Currently available for direct transfer, not-bounded stake.</p>
+
+<p><strong>bandwidth stake</strong>. Sum of active stake and bounded stake for given account.</p>
+
+<h2 id="model">Model</h2>
+
+<p><strong>Cyberd</strong> use a very simple bandwidth model.
+Main goal of that model is to reduce daily network growth to given constant, say 3gb per day.</p>
+
+<p>Thus, here we introduce <strong>resource credits</strong>(RS). Each message type have assigned <strong>RS</strong> cost.
+There is constant <code>DesirableNetworkBandwidthForRecoveryPeriod</code> determining desirable for <code>RecoveryPeriod</code> spent RS value.
+<code>RecoveryPeriod</code> is defining how fast user can recover their bandwidth from 0 to user max bandwidth.
+User has maximum <strong>RS</strong> proportional to his stake by
+ formula <code>user_max_rc = bandwidth_stake% * DesirableNetworkBandwidthForRecoveryPeriod</code>.</p>
+
+<p>There is period <code>AdjustPricePeriod</code> summing how much RS was spent for that period(<code>AdjustPricePeriodTotalSpent</code>).
+Also, there is constant <code>AdjustPricePeriodDesiredSpent</code>, used to calculate network loading.
+<code>AdjustPricePeriodTotalSpent/AdjustPricePeriodDesiredSpent</code> ratio defined so called current <strong>price multiplier</strong>.
+If network usage is low, <strong>price multiplier</strong> adjust message cost(by simply multiplying)
+ to allow user with lower stake to do more transactions.
+If resource demand increase, <strong>price multiplier</strong> goes <code>&gt;1</code> thus increase messages cost
+ and limiting final tx count for some long-term period(RC recovery will be <code>&lt;</code> then RC spending).</p>
+
+<h2 id="bandwidth-stake-change">Bandwidth stake change</h2>
+
+<p>There are only few ways to change acc <strong>bandwidth stake</strong>:</p>
+
+<ol>
+<li>Direct coins transfer.</li>
+<li>When distribution payouts occurs. For example, when validator change his commission rates,
+all delegations will be automatically unbounded. Another example, delegator itself unbound some part or full share.</li>
+</ol>
+
+<p><strong>Implementation details.</strong>
+All this cases will change user <strong>active stake</strong>, so we define bank hook <code>CoinsTransferHook</code>.
+ Due to inconsistent stateupon hook invoking (coins can be substructed, but deposit not added yet),
+ we should update user max RC only after deliver tx occur.</p>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#minimal-bandwidth-spec">Minimal Bandwidth Spec</a>
+<ul>
+<li><a href="#model">Model</a></li>
+<li><a href="#bandwidth-stake-change">Bandwidth stake change</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  <footer role="contentinfo" class="footer-primary">
+  <div class="container cf">
+    <div class="cf">
+      <div class="sitemap-menu grid-flex-container">
+        <div class="grid-flex-cell">
+          <ul class="sitemap list-unstyled">
+            <li class="sitemap-head">cyber•Congress</li>
+            <li><a href="https://cybercongress.ai/">about</a></li>
+            <li><a href="https://github.com/cybercongress">github</a></li>
+            <li><a href="https://github.com/cybercongress/cyb/blob/dev/README.md">agreement</a></li>
+            <li><a href="https://mainnet.aragon.org/#/cyberfoundation.aragonid.eth/">foundation</a></li>
+
+          </ul>
+        </div>
+        <div class="grid-flex-cell">
+          <ul class="sitemap list-unstyled">
+            <li class="sitemap-head">cyber</li>
+            <li><a href="https://cyberd.ai/">about</a></li>
+            <li><a href="https://github.com/cybercongress/cyberd">github</a></li>
+            <li><a href="https://github.com/cybercongress/cyberd/blob/master/docs/cyberd.md">whitepaper</a></li>
+            <li><a href="https://t.me/fuckgoogle">devChat</a></li>
+            <li><a href="#">forum</a></li>
+          </ul>
+        </div>
+        <div class="grid-flex-cell">
+          <ul class="sitemap list-unstyled">
+            <li class="sitemap-head">cyb</li>
+            <li><a href="https://cyb.ai/">about</a></li>
+            <li><a href="https://github.com/cybercongress/cyb">github</a></li>
+            <li><a href="https://github.com/cybercongress/cyb/releases">releases</a></li>
+          </ul>
+        </div>
+        <div class="grid-flex-cell">
+          <ul class="sitemap list-unstyled">
+            <li class="sitemap-head">chaingear</li>
+            <li><a href="https://cybercongress.github.io/chaingear/">about</a></li>
+            <li><a href="https://github.com/cybercongress/chaingear">github</a></li>
+          </ul>
+        </div>
+        <div class="grid-flex-cell">
+          <ul class="sitemap list-unstyled">
+            <li class="sitemap-head">Galt•Project</li>
+            <li><a href="https://galtproject.io/">about</a></li>
+            <li><a href="https://github.com/galtspace">github</a></li>
+            <li><a href="https://docs.galtproject.io/ru/">whitepaper</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="share-links">
+        <ul class="share list-unstyled">
+          
+          <li><a class="Twitter" href="https://twitter.com/cyber_devs">Twitter</a></li>
+          
+          <li><a class="Telegram" href="https://t.me/fuckgoogle">Telegram</a></li>
+          
+          <li><a class="Reddit" href="https://www.reddit.com/r/cybercongress/">Reddit</a></li>
+          
+          <li><a class="Steemit" href="https://steemit.com/@cybercongress">Steemit</a></li>
+          
+          <li><a class="Medium" href="https://medium.com">Medium</a></li>
+          
+          <li><a class="YouTube" href="https://www.youtube.com/channel/UCXgkFmGLhUcXSTp6d4cWEvg/featured">YouTube</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copyright center">© Cyber License. Don’t believe, don’t fear, don’t ask.</p>
+  </div>
+</footer>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-52930282-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+
+</html>
