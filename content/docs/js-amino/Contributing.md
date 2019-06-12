@@ -1,3 +1,6 @@
+---
+project: js-amino
+---
 # Contributing to js-amino
 Thank you for considering a contribution to **js-amino**! This guide explains how to:
 * Get started

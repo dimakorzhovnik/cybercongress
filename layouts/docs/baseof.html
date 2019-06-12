@@ -10,7 +10,7 @@
 
 <body id='docs'>
     {{ partial "header.html"  }}
-
+    {{ partial "docs/mobile-header" . }}
     <!-- {{ partial "header.html" }} -->
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container docs">
@@ -26,7 +26,6 @@
             <a href="/docs/chaingear">chaingear</a>
             <a href="/docs/js-amino">js-amino</a>
           </div>
-      <!-- {{ partial "docs/mobile-header" . }} -->
       {{ template "main" . }}
       {{ partial "docs/git-footer" . }}
       <!-- {{ partial "docs/inject/footer" . }} -->

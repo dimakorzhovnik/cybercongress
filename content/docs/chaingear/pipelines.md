@@ -1,8 +1,11 @@
+---
+project: chaingear
+---
 ## General Chaingear/Database pipeline
-![general_pipeline](mermaid/pipelines-general_pipeline.svg)
+![general_pipeline](/docs/chaingear/mermaid/pipelines-general_pipeline.svg)
 
 ## Database CRUD/tokenized Entry/Funds pipeline
-![registry_crud](mermaid/pipelines-database_crud.svg)
+![registry_crud](/docs/chaingear/mermaid/pipelines-database_crud.svg)
 
 ## Chaingear tokenized Database pipeline
-![chaingear_tokenized](mermaid/pipelines-chaingear_tokenized.svg)
+![chaingear_tokenized](/docs/chaingear/mermaid/pipelines-chaingear_tokenized.svg)

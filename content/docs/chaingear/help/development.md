@@ -1,3 +1,6 @@
+---
+project: chaingear
+---
 # Configuring, development and deploying
 
 ##### Install
