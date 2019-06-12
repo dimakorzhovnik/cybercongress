@@ -18,7 +18,7 @@ jobs:
     docker:
       - image: olizilla/ipfs-dns-deploy:latest
         environment:
-          DOMAIN: blog.ipfs.io
+          DOMAIN: https://github.com/dimakorzhovnik/cybercongress
           BUILD_DIR: public
     steps:
       - attach_workspace:
