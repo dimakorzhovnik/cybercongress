@@ -9,14 +9,6 @@ jobs:
           command: |
             rm -rf public/
             make build
-
-  deploy:
-    docker:
-      - image: olizilla/cybercongress-deploy
-    steps:
-      - run:
-          name: Deploy website
-          command: |
             cd public
             git init
             git config user.name "dimakorzhovnik"
@@ -28,14 +20,10 @@ jobs:
             cd ..
             rm -rf public/
 
-           
 
 workflows:
   version: 2
   build-deploy:
     jobs:
       - build
-      - deploy:
-          context: cybercongress-deploy
-          requires:
-            - build
+      
