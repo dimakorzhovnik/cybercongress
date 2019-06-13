@@ -8,12 +8,33 @@ jobs:
     steps:
       - checkout
       - run:
-          command: make
+          command: |
+            rm -rf public/
+            make build
       - persist_to_workspace:
           root: .
           paths:
             - public
 
+  deploy:
+    docker:
+      - image: olizilla/ipfs-dns-deploy:latest
+    steps:
+      - run:
+          name: Deploy website to IPFS
+          command: |
+            cd public
+            git init
+            git config user.name "dimakorzhovnik"
+            git config user.email "korzhovnik.dima@gmail.com"
+            git config commit.gpgsign false
+            git add .
+            git commit -m "Deploy to gh-pages"
+            git push --force --quiet https://${GITHUB_TOKEN}@github.com/dimakorzhovnik/cybercongress.git master:gh-pages
+            cd ..
+            rm -rf public/
+
+           
 
 workflows:
   version: 2
@@ -21,6 +42,5 @@ workflows:
     jobs:
       - build
       - deploy:
-          context: ipfs-dns-deploy
           requires:
             - build
