@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="cyber•Congress" />
 <meta name="twitter:creator" content="cyber•Congress" />
 <meta name="twitter:description" content="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open." />
-<meta name="twitter:domain" content="" />
+<meta name="twitter:domain" content="https://cybercongress.ai" />
 <meta name="twitter:image:src" content="//img/ipfs-logo-256-ice.png" />
 
 <link rel="stylesheet" href="./css/main.css" />
@@ -49,6 +49,9 @@
 
 <script src="./asciinema/asciinema-player.js"></script>
 <script src="./highlight/highlight.js"></script>
+<script src="./statistics/statistics.js"></script>
+<script src="./timer/timer.js"></script>
+
 <script>hljs.initHighlightingOnLoad()</script>
 
 <script type="application/javascript">
@@ -66,7 +69,7 @@ if (!doNotTrack) {
 </head>
 
 <body class="home">
-    <header class="header-has-logo" id="stars">
+    <header class="header-has-logo"  id="stars" >
   <div class="container cf">
     <h1 class="pull-left logo margin-bottom">
       <a href="./" class="logo ipfs-logo transition transition-fadeout">cyber•Congress</a>
@@ -77,30 +80,127 @@ if (!doNotTrack) {
       <label for="menu-toggle"></label>
       <ul class="list-unstyled list-inline cf">
         <li><a href="./#propducts">Products</a></li>
-        <li><a href="./#team" >Team</a></li>
-        <li><a href="./docs/cyberd/cyberd/" >Docs</a></li>
+        <li><a href="./docs/cyberd/cyberd/"
+            >Docs</a></li>
         <li><a href="./post" >Blog</a></li>
       </ul>
     </nav>
     
-      <div class="hero hero-home">
-        <div class="hero-text">
-          <h2 class="headline-main">Cyberd</h2>
-          <span class="divider"></span>
-          <h3 class="subhead-main">Testnet euler-4 is alive</h3>
-          <div class="cta">
-            <a class="button-gravity" href="./docs/cyberd/help/run_validator/">Become a validator</a>
-            <a class="button-gravity" href="./docs/cyberd/cyberd/">Whitepaper</a>
+    <div class="hero hero-home">
+      <div class="hero-text">
+        <h2 class="headline-main">Cyberd: like google but cyber</h2>
+        <span class="divider"></span>
+        <div class='time-message'>
+          Euler-5 testnet will launch in:
+        </div>
+
+<div id="countdown" class="countdown">
+  <div class="countdown-number">
+    <span class="days countdown-time"></span>
+    
+  </div>
+  <div class="countdown-number">
+    <span class="hours countdown-time"></span>
+    
+  </div>
+  <div class="countdown-number">
+    <span class="minutes countdown-time"></span>
+    
+  </div>
+  <div class="countdown-number">
+    <span class="seconds countdown-time"></span>
+    
+  </div>
+</div>
+        <div class='subhead-last-block'>
+          <span class="subhead-main">Testnet <span id='testnet'>euler-</span> at block </span>
+          <span class='last-block' id='lastBlock'>0</span>
+        </div>
+          <a class="button-gravity" href="./docs/cyberd/run_validator/">Become a validator</a>
+          <a class="button-gravity" href="./docs/cyberd/cyberd/">Whitepaper</a>
+      </div>
+      <div class='statiscs'>
+        <div class='grid-flex-container'>
+          <div class='grid-flex-cell card'>
+            <p class='card-value' id='cyberlinks'>0</p>
+            <p class='card-value'>cyberlinks</p>
+          </div>
+          <div class='grid-flex-cell card'>
+            <p id='contentIds'>0</p>
+            <p>content ids</p>
+          </div>
+          <div class='grid-flex-cell card'>
+            <p id='accounts'>0</p>
+            <p>accounts</p>
           </div>
         </div>
+        
+
+
       </div>
+    </div>
     
   </div>
   <div class="view-more">
     <label>View more</label><a href="#"></a>
   </div>
 </header>
+<script>
+function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor((t / 1000) % 60);
+    var minutes = Math.floor((t / 1000 / 60) % 60);
+    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+      total: t,
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds
+    };
+  }
+  
+  function initializeClock(id, endtime) {
+    var clock = document.getElementById(id);
+    var daysSpan = clock.querySelector(".days");
+    var hoursSpan = clock.querySelector(".hours");
+    var minutesSpan = clock.querySelector(".minutes");
+    var secondsSpan = clock.querySelector(".seconds");
+  
+    function updateClock() {
+      var t = getTimeRemaining(endtime);
+  
+      if (t.total <= 0) {
+        document.getElementById("countdown").className = "hidden";
+        document.getElementById("deadline-message").className = "visible";
+        clearInterval(timeinterval);
+        return true;
+      }
+  
+      daysSpan.innerHTML = t.days;
+      hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+      minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+    }
+  
+    updateClock();
+    var timeinterval = setInterval(updateClock, 1000);
 
+  }
+
+  var resultGMT;
+  var offset = new Date().getTimezoneOffset();
+    if(offset<0)
+      resultGMT = "GMT+" + (offset/-60);
+    else
+      resultGMT = "GMT-" + offset/60;
+  
+   var deadline="July 30 2019 12:00:00 "+ resultGMT;  
+  
+  
+  initializeClock("countdown", deadline);
+</script>
 
     <div class="container">
 
@@ -118,7 +218,7 @@ if (!doNotTrack) {
           <p>InterPlanetary Search Engine & Knowledge Consensus Computer in Go/Cosmos-SDK/Tendermint</p>
         </a>
         <div class='content-center position-absolute bottom'>
-          <a href="https://github.com/cybercongress/cyberd/blob/master/docs/help/run_validator.md" class='button-gravity' target="_blank">
+          <a href="https://github.com/cybercongress/cyberd/blob/master/docs/run_validator.md" class='button-gravity' target="_blank">
             become validator
           </a>
         </div>
@@ -209,63 +309,6 @@ if (!doNotTrack) {
   </div>
 </section>
 
-        <section id="team" class="content-center">
-    <h2>Team</h2>
-    <div class="grid-flex-container">
-        <div class="grid-flex-cell team-item">
-            <div class="illustration team-item__photo">
-                <img src="./images/team-dmitriy-starodubcev.jpg" />
-            </div>
-            <h5 class='team-item__name'>Dmitriy Starodubcev</h5>
-            <p class='team-item__role'>Advisor and co-Founder</p>
-            <p class='team-item__info'>A cryptoinvestor, co-founder in Cyber.Fund, Satoshi.Pie, Golos Blockchain,
-                Cyber.Search and Cyber.Congress.</p>
-            <div class='position-absolute bottom team-item__link'>
-                <a href="https://github.com/xhipster">
-                    <img src="./images/icon-github-grey.svg" alt="">
-                    <p>
-                        xhipster
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="grid-flex-cell team-item">
-            <div class="illustration team-item__photo">
-
-                <img src="./images/team-nikolai-popeka.jpg" />
-            </div>
-            <h5 class='team-item__name'>Nikolai Popeka</h5>
-            <p class='team-item__role'>Founder, CEO and Product Manager</p>
-            <p class='team-item__info'>A cryptoinvestor, co-founder in NIT Engineering company, nebo.ru marketplace.</p>
-            <div class='position-absolute bottom team-item__link'>
-                <a href="https://github.com/npopeka">
-                    <img src="./images/icon-github-grey.svg" alt="">
-                    <p>
-                        npopeka
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="grid-flex-cell team-item">
-            <div class="illustration team-item__photo">
-                <img src="./images/team-valery-litvin.jpg" />
-            </div>
-            <h5 class='team-item__name'>Valery Litvin</h5>
-            <p class='team-item__role'>Co-founder and Software developer</p>
-            <p class='team-item__info'>A cryptoinvestor, co-founder in Golos Blockchain, Cyber.Search.</p>
-            <div class='position-absolute bottom team-item__link'>
-                <a href="https://github.com/litvintech">
-                    <img src="./images/icon-github-grey.svg" alt="">
-                    <p>
-                        litvintech
-                    </p>
-                </a>
-            </div>
-        </div>
-
-
-    </div>
-</section>
 
         
 
@@ -285,7 +328,7 @@ if (!doNotTrack) {
         
         <li><span class="date">04 March 2019</span> <a href="./ultimate-cyberd-cli-guide-testnet-euler-3/">Ultimate cyberd CLI guide. Testnet: Euler-3</a></li>
         
-        <li><span class="date">01 March 2019</span> <a href="./a-note-about-cbd-and-cyb-distribution/">A note about CBD and CYB Distribution</a></li>
+        <li><span class="date">08 February 2019</span> <a href="./ultimate-cyberd-cli-guide-testnet-euler-1/">Ultimate cyberd CLI guide. Testnet: Euler-1.</a></li>
         
       </ol>
     </div>
@@ -330,6 +373,8 @@ if (!doNotTrack) {
             <li><a href="https://github.com/cybercongress">github</a></li>
             <li><a href="https://github.com/cybercongress/cyb/blob/dev/README.md">agreement</a></li>
             <li><a href="https://mainnet.aragon.org/#/cyberfoundation.aragonid.eth/">cyber•Foundation</a></li>
+            <li><a href="https://github.com/orgs/cybercongress/teams/congress/members">teams</a></li>
+
 
           </ul>
         </div>
@@ -386,8 +431,7 @@ if (!doNotTrack) {
     <p class="footer-copyright center">© Cyber License. Don’t believe, don’t fear, don’t ask.</p>
   </div>
 </footer>
-    <script src="./js/common.js"></script>
-    <script src="./js/header-and-latest.js"></script>
+
 </body>
 
 </html>

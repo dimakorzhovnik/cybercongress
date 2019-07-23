@@ -17,8 +17,8 @@
 <meta name="description" content="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open." />
 <meta name="author" content="cyber•Congress" />
 
-  <link rel="canonical" href="../../../docs/cyb/app-guidelines/" />
-  <link rel="alternate" href="../../../docs/cyb/app-guidelines/" hreflang="x-default">
+<link rel="canonical" href="../../../docs/cyb/app-guidelines/" />
+<link rel="alternate" href="../../../docs/cyb/app-guidelines/" hreflang="x-default">
 
 
 <meta property="og:type" content="website" />
@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="cyber•Congress" />
 <meta name="twitter:creator" content="cyber•Congress" />
 <meta name="twitter:description" content="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open." />
-<meta name="twitter:domain" content="" />
+<meta name="twitter:domain" content="https://cybercongress.ai" />
 <meta name="twitter:image:src" content="//img/ipfs-logo-256-ice.png" />
 
 <link rel="stylesheet" href="../../../css/main.css" />
@@ -45,10 +45,30 @@
 <link rel="stylesheet" href="../../../asciinema/asciinema-player.css" />
 
 <link rel="shortcut icon" href="../../../img/favicon.png">
-<link rel="alternate feed" href="../../../index.xml" type="application/rss+xml"  title="IPFS Blog" />
+<link rel="alternate feed" href="../../../index.xml" type="application/rss+xml" title="IPFS Blog" />
 
 <script src="../../../asciinema/asciinema-player.js"></script>
 <script src="../../../highlight/highlight.js"></script>
+
+<script src="../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+    var baseurl = "\/";
+</script>
+
+
+<script type="text/javascript" src="../../../js/lunr.min.js"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js"></script>
+<script type="text/javascript" src="../../../js/learn.js"></script>
+<script type="text/javascript" src="../../../js/search.js"></script>
+
+<script src="../../../js/clipboard.min.js"></script>
+
+<script src="../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../theme-flex/script.js"></script>
+
 <script>hljs.initHighlightingOnLoad()</script>
 
 <script type="application/javascript">
@@ -66,29 +86,33 @@ if (!doNotTrack) {
 </head>
 
 <body id='docs'>
-    <header class="header-has-logo" id="stars">
-  <div class="container cf">
-    <h1 class="pull-left logo margin-bottom">
-      <a href="../../../" class="logo ipfs-logo transition transition-fadeout">cyber•Congress</a>
-      <a href="../../../"><span class='logo-text'>cyber•Congress</span></a>
-    </h1>
-    <nav role="navigation" class="pull-right top-nav top-nav-dark cf">
-      <input id="menu-toggle" type="checkbox" class="menu-toggle">
-      <label for="menu-toggle"></label>
-      <ul class="list-unstyled list-inline cf">
-        <li><a href="../../../#propducts">Products</a></li>
-        <li><a href="../../../#team" >Team</a></li>
-        <li><a href="../../../docs/cyberd/cyberd/" >Docs</a></li>
-        <li><a href="../../../post" >Blog</a></li>
-      </ul>
-    </nav>
-    
-  </div>
-  <div class="view-more">
-    <label>View more</label><a href="#"></a>
-  </div>
-</header>
+    <header class="header-has-logo"  id="stars" >
+    <div class="container cf">
+        <h1 class="pull-left logo margin-bottom">
+            <a href="../../../" class="logo ipfs-logo transition transition-fadeout">cyber•Congress</a>
+            <a href="../../../"><span class='logo-text'>cyber•Congress</span></a>
+        </h1>
+        <nav role="navigation" class="pull-right top-nav top-nav-dark cf">
+            <input id="menu-toggle" type="checkbox" class="menu-toggle">
+            <label for="menu-toggle"></label>
+            <ul class="list-unstyled list-inline cf flex align-center">
+                <div class="searchbox">
+                    <input data-search-input id="search-by" type="text" placeholder="Search...">
+                    <span data-search-clear=""><i class="cansel"></i></span>
+                </div>
+                <li><a href="../../../#propducts">Products</a></li>
+                <li><a href="../../../docs/cyberd/cyberd/"
+                        >Docs</a></li>
+                <li><a href="../../../post"
+                        >Blog</a></li>
+            </ul>
+        </nav>
 
+    </div>
+    <div class="view-more">
+        <label>View more</label><a href="#"></a>
+    </div>
+</header>
     <header class="docs-header-mob align-center justify-between book-header">
   <label for="menu-control">
     <img src="../../../svg/menu.svg" alt="Menu" />
@@ -127,9 +151,7 @@ if (!doNotTrack) {
   </style>
 
 <ul>
-<li><a href="../../../docs/cyb/cyb/">Whitepaper</a></li>
-<li><a href="../../../docs/cyb/web3-vision/">Web3 vision</a></li>
-<li><a href="../../../docs/cyb/app-guidelines/">App guidelines</a></li>
+<li><a href="../../../docs/cyb/dura/">Web3 vision</a></li>
 </ul>
 
 
@@ -156,13 +178,14 @@ if (!doNotTrack) {
 
     <div class="book-page">
         <div class='project'>
-            <a href="../../../docs/cyberd">cyber</a>
-            <a href="../../../docs/cyb">cyb</a>
-            <a href="../../../docs/chaingear">chaingear</a>
-            <a href="../../../docs/js-amino">js-amino</a>
+            <a href="../../../docs/cyberd/cyberd/">cyber</a>
+            <a href="../../../docs/cyb/dura/">cyb</a>
+            <a href="../../../docs/chaingear/whitepaper/">chaingear</a>
+            <a href="../../../docs/js-amino/overview/">js-amino</a>
           </div>
       
 <article class="markdown">
+  <h1></h1>
 
 <h1 id="dapp-guidelines">DApp guidelines</h1>
 
@@ -282,6 +305,8 @@ Open your app, click on &ldquo;deploy&rdquo; button and enter IPFS hash of your 
             <li><a href="https://github.com/cybercongress">github</a></li>
             <li><a href="https://github.com/cybercongress/cyb/blob/dev/README.md">agreement</a></li>
             <li><a href="https://mainnet.aragon.org/#/cyberfoundation.aragonid.eth/">cyber•Foundation</a></li>
+            <li><a href="https://github.com/orgs/cybercongress/teams/congress/members">teams</a></li>
+
 
           </ul>
         </div>

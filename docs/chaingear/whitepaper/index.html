@@ -17,8 +17,8 @@
 <meta name="description" content="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open." />
 <meta name="author" content="cyber•Congress" />
 
-  <link rel="canonical" href="../../../docs/chaingear/whitepaper/" />
-  <link rel="alternate" href="../../../docs/chaingear/whitepaper/" hreflang="x-default">
+<link rel="canonical" href="../../../docs/chaingear/whitepaper/" />
+<link rel="alternate" href="../../../docs/chaingear/whitepaper/" hreflang="x-default">
 
 
 <meta property="og:type" content="website" />
@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="cyber•Congress" />
 <meta name="twitter:creator" content="cyber•Congress" />
 <meta name="twitter:description" content="A peer-to-peer hypermedia protocol to make the web faster, safer, and more open." />
-<meta name="twitter:domain" content="" />
+<meta name="twitter:domain" content="https://cybercongress.ai" />
 <meta name="twitter:image:src" content="//img/ipfs-logo-256-ice.png" />
 
 <link rel="stylesheet" href="../../../css/main.css" />
@@ -45,10 +45,30 @@
 <link rel="stylesheet" href="../../../asciinema/asciinema-player.css" />
 
 <link rel="shortcut icon" href="../../../img/favicon.png">
-<link rel="alternate feed" href="../../../index.xml" type="application/rss+xml"  title="IPFS Blog" />
+<link rel="alternate feed" href="../../../index.xml" type="application/rss+xml" title="IPFS Blog" />
 
 <script src="../../../asciinema/asciinema-player.js"></script>
 <script src="../../../highlight/highlight.js"></script>
+
+<script src="../../../js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+    var baseurl = "\/";
+</script>
+
+
+<script type="text/javascript" src="../../../js/lunr.min.js"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js"></script>
+<script type="text/javascript" src="../../../js/learn.js"></script>
+<script type="text/javascript" src="../../../js/search.js"></script>
+
+<script src="../../../js/clipboard.min.js"></script>
+
+<script src="../../../js/featherlight.min.js"></script>
+
+
+
+<script src="../../../theme-flex/script.js"></script>
+
 <script>hljs.initHighlightingOnLoad()</script>
 
 <script type="application/javascript">
@@ -66,29 +86,33 @@ if (!doNotTrack) {
 </head>
 
 <body id='docs'>
-    <header class="header-has-logo" id="stars">
-  <div class="container cf">
-    <h1 class="pull-left logo margin-bottom">
-      <a href="../../../" class="logo ipfs-logo transition transition-fadeout">cyber•Congress</a>
-      <a href="../../../"><span class='logo-text'>cyber•Congress</span></a>
-    </h1>
-    <nav role="navigation" class="pull-right top-nav top-nav-dark cf">
-      <input id="menu-toggle" type="checkbox" class="menu-toggle">
-      <label for="menu-toggle"></label>
-      <ul class="list-unstyled list-inline cf">
-        <li><a href="../../../#propducts">Products</a></li>
-        <li><a href="../../../#team" >Team</a></li>
-        <li><a href="../../../docs/cyberd/cyberd/" >Docs</a></li>
-        <li><a href="../../../post" >Blog</a></li>
-      </ul>
-    </nav>
-    
-  </div>
-  <div class="view-more">
-    <label>View more</label><a href="#"></a>
-  </div>
-</header>
+    <header class="header-has-logo"  id="stars" >
+    <div class="container cf">
+        <h1 class="pull-left logo margin-bottom">
+            <a href="../../../" class="logo ipfs-logo transition transition-fadeout">cyber•Congress</a>
+            <a href="../../../"><span class='logo-text'>cyber•Congress</span></a>
+        </h1>
+        <nav role="navigation" class="pull-right top-nav top-nav-dark cf">
+            <input id="menu-toggle" type="checkbox" class="menu-toggle">
+            <label for="menu-toggle"></label>
+            <ul class="list-unstyled list-inline cf flex align-center">
+                <div class="searchbox">
+                    <input data-search-input id="search-by" type="text" placeholder="Search...">
+                    <span data-search-clear=""><i class="cansel"></i></span>
+                </div>
+                <li><a href="../../../#propducts">Products</a></li>
+                <li><a href="../../../docs/cyberd/cyberd/"
+                        >Docs</a></li>
+                <li><a href="../../../post"
+                        >Blog</a></li>
+            </ul>
+        </nav>
 
+    </div>
+    <div class="view-more">
+        <label>View more</label><a href="#"></a>
+    </div>
+</header>
     <header class="docs-header-mob align-center justify-between book-header">
   <label for="menu-control">
     <img src="../../../svg/menu.svg" alt="Menu" />
@@ -128,15 +152,8 @@ if (!doNotTrack) {
 
 <ul>
 <li><a href="../../../docs/chaingear/whitepaper/">Whitepaper</a></li>
-<li><a href="../../../docs/chaingear/overview/">Overview</a></li>
-<li><a href="../../../docs/chaingear/contracts/">Contracts</a></li>
-<li><a href="../../../docs/chaingear/pipelines/">Pipelines</a></li>
-<li><a href="../../../docs/chaingear/changelog/">Changelog</a></li>
-<li><strong>Help</strong>
-
-<ul>
-<li><a href="../../../docs/chaingear/help/development/">Development</a></li>
-</ul></li>
+<li><a href="../../../docs/chaingear/changelog/">CHANGELOG</a></li>
+<li><a href="../../../docs/chaingear/contributing/">CONTRIBUTING</a></li>
 </ul>
 
 
@@ -163,13 +180,14 @@ if (!doNotTrack) {
 
     <div class="book-page">
         <div class='project'>
-            <a href="../../../docs/cyberd">cyber</a>
-            <a href="../../../docs/cyb">cyb</a>
-            <a href="../../../docs/chaingear">chaingear</a>
-            <a href="../../../docs/js-amino">js-amino</a>
+            <a href="../../../docs/cyberd/cyberd/">cyber</a>
+            <a href="../../../docs/cyb/dura/">cyb</a>
+            <a href="../../../docs/chaingear/whitepaper/">chaingear</a>
+            <a href="../../../docs/js-amino/overview/">js-amino</a>
           </div>
       
 <article class="markdown">
+  <h1></h1>
 
 <h1 id="chaingear">Chaingear</h1>
 
@@ -295,25 +313,25 @@ Our solution is save in database contract schema&rsquo;s definition which allow 
 
 <h4 id="chaingear-setup-and-database-creation-schema-initialization-pipeline">Chaingear setup and Database creation/schema initialization pipeline</h4>
 
-<p><img src="../../../docs/chaingear/mermaid/pipelines-general_pipeline.svg" alt="general_pipeline" /></p>
+<p><img src="../img/pipelines-general_pipeline.svg" alt="general_pipeline" /></p>
 
 <h4 id="database-crud-entry-token-pipeline">Database CRUD/Entry-token pipeline</h4>
 
-<p><img src="../../../docs/chaingear/mermaid/pipelines-database_crud.svg" alt="database_crud" /></p>
+<p><img src="../img/pipelines-database_crud.svg" alt="database_crud" /></p>
 
 <h4 id="chaingear-s-database-token-pipeline">Chaingear&rsquo;s Database-token pipeline</h4>
 
-<p><img src="../../../docs/chaingear/mermaid/pipelines-chaingear_tokenized.svg" alt="chaingear_tokenized" /></p>
+<p><img src="../img/pipelines-chaingear_tokenized.svg" alt="chaingear_tokenized" /></p>
 
 <h3 id="inheritance">Inheritance</h3>
 
 <h4 id="chaingear-inheritance">Chaingear inheritance</h4>
 
-<p><img src="../../../docs/chaingear/mermaid/contracts-chaingear_inheritance.svg" alt="chaingear_inheritance" /></p>
+<p><img src="../img/contracts-chaingear_inheritance.svg" alt="chaingear_inheritance" /></p>
 
 <h4 id="database-inheritance">Database inheritance</h4>
 
-<p><img src="../../../docs/chaingear/mermaid/contracts-database_inheritance.svg" alt="database_inheritance" /></p>
+<p><img src="../img/contracts-database_inheritance.svg" alt="database_inheritance" /></p>
 
 <h3 id="web3-application">web3 Application</h3>
 
@@ -321,20 +339,19 @@ Our solution is save in database contract schema&rsquo;s definition which allow 
 
 <p>| | |
 |-|-|
-|<img src="../../../docs/chaingear/app/chaingear.png" alt="chaingear-general" />|<img src="../../../docs/chaingear/app/database-token.png" alt="database-token" />|</p>
+|<img src="../img/chaingear.png" alt="chaingear-general" />|<img src="../img/database-token.png" alt="database-token" />|</p>
 
 <h4 id="database-1">Database</h4>
 
 <p>| | |
 |-|-|
-|<img src="../../../docs/chaingear/app/database-admin.png" alt="database-admin" />|<img src="../../../docs/chaingear/app/entry-token.png" alt="entry-token" />|</p>
+|<img src="../img/database-admin.png" alt="database-admin" />|<img src="../img/entry-token.png" alt="entry-token" />|</p>
 
 <h4 id="database-deploy-and-schema-designer">Database Deploy and Schema designer</h4>
 
 <p>| | |
 |-|-|
-|<img src="../../../docs/chaingear/app/database-deploy.png" alt="database" />|
-<img src="../../../docs/chaingear/app/schema-gen.png" alt="schema-gen" />|</p>
+|<img src="../img/database-deploy.png" alt="database" />|<img src="../img/schema-gen.png" alt="schema-gen" />|</p>
 
 <h3 id="future-work-and-releases">Future work and releases</h3>
 
@@ -421,6 +438,8 @@ Our solution is save in database contract schema&rsquo;s definition which allow 
             <li><a href="https://github.com/cybercongress">github</a></li>
             <li><a href="https://github.com/cybercongress/cyb/blob/dev/README.md">agreement</a></li>
             <li><a href="https://mainnet.aragon.org/#/cyberfoundation.aragonid.eth/">cyber•Foundation</a></li>
+            <li><a href="https://github.com/orgs/cybercongress/teams/congress/members">teams</a></li>
+
 
           </ul>
         </div>
